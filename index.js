@@ -27,7 +27,13 @@ app.use((req, res, next) => {
   next();
 });
 
-
+app.use(cors(
+    {
+        origin : ["https://stackoverflowclone-three.vercel.app/"],
+        methods : ["POST","GET","PUT","DELETE"],
+        credentials : true
+    }
+));
 
 app.use(cors());
 dotenv.config();
