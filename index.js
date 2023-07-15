@@ -29,7 +29,6 @@ app.use(cors(
     }
 ));
 
-app.use(cors());
 dotenv.config();
 startCronJobs();
 mongoose.set('strictQuery', false);
