@@ -59,7 +59,7 @@ app.use('/api/v1/media',MediaRoute);
 
 
 const PORT= process.env.PORT || 5000
-//const CONNECTION_URL="mongodb+srv://admin:admin@stack-overflow-clone.zdvbxqk.mongodb.net/?retryWrites=true&w=majority"
+const CONNECTION_URL="mongodb+srv://admin:admin@stack-overflow-clone.zdvbxqk.mongodb.net/?retryWrites=true&w=majority"
 
 const DATABASE_URL=process.env.CONNECTION_URL
 
