@@ -21,7 +21,13 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+ {
+  origin : ['https://stackoverflowclone-three.vercel.app'],
+  methods : ['GET','POST','PUT','DELETE'],
+  credential : true
+ }
+));
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
