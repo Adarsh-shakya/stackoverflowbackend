@@ -23,7 +23,7 @@ const app = express();
 
 app.use(cors(
  {
-  origin : ['https://stackoverflowclone-eq0rpfiyj-adarsh-shakya.vercel.app'],
+  origin : ['http://localhost:3000/'],
   methods : ['GET','POST','PUT','DELETE'],
   credential : true
  }
