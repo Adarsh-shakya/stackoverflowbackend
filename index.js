@@ -2,20 +2,15 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from 'cors';
 import dotenv from 'dotenv';
-import path from "path";
 
 
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
-const  __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+
 
  import useRouters from './routes/users.js';
  import questionRoutes from './routes/Question.js';
  import answerRoutes from './routes/Answer.js';
  import paymentRoute from './routes/paymentRouter.js';
- import MediaRoute from './routes/Media.js';
  import {startCronJobs } from './controllers/Cron.js';
 
 
@@ -52,7 +47,6 @@ app.use('/user', useRouters);
 app.use('/questions', questionRoutes);
 app.use('/answer',answerRoutes);
 app.use("/api", paymentRoute);
-app.use('/api/v1/media',MediaRoute);
 
 
 
