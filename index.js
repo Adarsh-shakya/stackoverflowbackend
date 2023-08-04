@@ -19,7 +19,7 @@ const app = express();
 app.use(cors(
  {
   origin : 'https://stackoverflow-six.vercel.app',
-  methods : ['GET','POST','PUT','DELETE'],
+  methods : ['GET','POST','PUT','DELETE','PATCH'],
   credential : true
  }
 ));
