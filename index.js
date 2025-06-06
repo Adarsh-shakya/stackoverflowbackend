@@ -20,7 +20,7 @@ app.use(cors(
  {
   origin : 'https://stackoverflow-six.vercel.app',
   methods : ['GET','POST','PUT','DELETE','PATCH'],
-  credential : true
+  credentials : true
  }
 ));
 
@@ -42,6 +42,7 @@ app.get("/api/getkey",(req,res)=>{
     res.status(200).json({key:"rzp_test_0XG4yyBnGzSslL"})
 
 })    
+app.options('*', cors());  // handle pre-flight requests
 
 app.use('/user', useRouters);
 app.use('/questions', questionRoutes);
