@@ -3,7 +3,7 @@
   "name": "server",
   "builds": [
     {
-      "src": "index.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -15,7 +15,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "/api/index.js"
     }
   ]
 }
